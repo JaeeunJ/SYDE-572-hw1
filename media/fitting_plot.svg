@@ -1,0 +1,36 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#ffffff" rx="16"/>
+  <path d="M70 350 L550 350 M120 70 L120 350" stroke="#e5e7eb" stroke-width="2"/>
+  <path d="M70 280 L550 280 M70 210 L550 210 M70 140 L550 140 M70 70 L550 70" stroke="#f3f4f6" stroke-width="1"/>
+  <path d="M220 70 L220 350 M320 70 L320 350 M420 70 L420 350 M520 70 L520 350" stroke="#f3f4f6" stroke-width="1"/>
+
+  <text x="310" y="35" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1f2937">MSE Curve Fitting</text>
+  <text x="310" y="390" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#6b7280">X Axis</text>
+  <text x="30" y="210" font-family="sans-serif" font-size="14" text-anchor="middle" transform="rotate(-90 30 210)" fill="#6b7280">Y Axis</text>
+
+  <rect x="450" y="240" width="120" height="80" fill="#ffffff" stroke="#e5e7eb" rx="4"/>
+  <circle cx="470" cy="255" r="4" fill="#1f2937"/>
+  <text x="485" y="259" font-family="sans-serif" font-size="12" fill="#1f2937">Data Points</text>
+  <line x1="460" y1="275" x2="480" y2="275" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="485" y="279" font-family="sans-serif" font-size="12" fill="#1f2937">Line Fit</text>
+  <line x1="460" y1="295" x2="480" y2="295" stroke="#10b981" stroke-width="3"/>
+  <text x="485" y="299" font-family="sans-serif" font-size="12" fill="#1f2937">Parabola Fit</text>
+
+  <line x1="70" y1="384" x2="470" y2="136" stroke="#ef4444" stroke-width="2" stroke-dasharray="6,4"/>
+
+  <polyline points="70,325 120,331 220,307 320,234 420,113 470,34" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g fill="#1f2937" font-family="sans-serif" font-size="11">
+    <circle cx="120" cy="335" r="6"/>
+    <text x="132" y="340">(0, 0.5)</text>
+    
+    <circle cx="220" cy="305" r="6"/>
+    <text x="232" y="310">(1, 1.5)</text>
+    
+    <circle cx="320" cy="245" r="6"/>
+    <text x="332" y="250">(2, 3.5)</text>
+    
+    <circle cx="420" cy="125" r="6"/>
+    <text x="432" y="130">(3, 7.5)</text>
+  </g>
+</svg>

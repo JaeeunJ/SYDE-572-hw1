@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SYDE 572 - Bento Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <div class="bento-container">
+
+        <header class="bento-card col-12 header-card">
+            <div>
+                <h1>Optimization & Curve Fitting</h1>
+                <div class="subtitle">SYDE 572 Homework 1</div>
+            </div>
+            <div>
+                <span class="badge">Charissa Jeong (20939112)</span>
+            </div>
+        </header>
+
+        <div class="bento-card col-8">
+            <h2>Part 1A: Shortest Distance (Polynomial)</h2>
+            <p>Minimizing the squared distance <strong>D(x)</strong> from external target points to the continuous
+                mathematical curve <strong>y = x² + 5</strong> using numerical root-finding algorithms.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Target Point</th>
+                        <th>Newton x*</th>
+                        <th>Secant x*</th>
+                        <th>Shortest Distance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>(0, 0)</td>
+                        <td>0.0000</td>
+                        <td>0.0000</td>
+                        <td>5.0000</td>
+                    </tr>
+                    <tr>
+                        <td>(2, 0)</td>
+                        <td>0.1802</td>
+                        <td>0.1802</td>
+                        <td>5.3514</td>
+                    </tr>
+                    <tr>
+                        <td>(-4, 0)</td>
+                        <td>-0.3547</td>
+                        <td>-0.3547</td>
+                        <td>6.2898</td>
+                    </tr>
+                    <tr>
+                        <td>(6, 0)</td>
+                        <td>0.5262</td>
+                        <td>0.5262</td>
+                        <td>7.6032</td>
+                    </tr>
+                    <tr>
+                        <td>(-8, 0)</td>
+                        <td>-0.6861</td>
+                        <td>-0.6861</td>
+                        <td>9.1336</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="bento-card col-4 image-card">
+            <img src="./media/distance_plot.svg" alt="Polynomial Distance Plot">
+        </div>
+
+        <div class="bento-card col-6">
+            <h2>Part 1B: Non-Polynomial Test</h2>
+            <p>Validating the Newton-Raphson implementation on an exponential curve <strong>y = e^(0.5x)</strong>.</p>
+            <table>
+                <thead>
+                    <tr>
+                        <th>Target</th>
+                        <th>Optimal x*</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td>(2, 0)</td>
+                        <td>1.3090</td>
+                    </tr>
+                    <tr>
+                        <td>(0, 0)</td>
+                        <td>-0.7034</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <div class="bento-card col-6 image-card">
+            <img src="./media/nonpoly_plot.svg" alt="Exponential Distance Plot">
+        </div>
+
+        <div class="bento-card col-12 dark-card">
+            <h2>Hand Calculations</h2>
+            <p style="color: #9ca3af;">Analytical derivatives for Part 1 and normal equations for Part 2.</p>
+            <div
+                style="border-radius: 12px; overflow: hidden; margin-top: 24px; border: 1px solid #374151; background: #ffffff;">
+                <img src="./media/scans.png" alt="Handwritten Math Scans"
+                    style="width: 100%; height: auto; display: block;">
+            </div>
+        </div>
+
+        <div class="bento-card col-8">
+            <h2>Part 2: MSE Curve Fitting</h2>
+            <p>Fitting models to an overdetermined linear system where the number of equations exceeds parameters
+                (<strong>M > N</strong>)[cite: 8]. We use coordinate descent to minimize the squared residual error,
+                matching the analytical pseudo-inverse solution <strong>x* = (AᵀA)⁻¹Aᵀb</strong>[cite: 8].</p>
+            <div class="metric-container">
+                <div class="metric-box">
+                    <div class="metric-title">Line Fit</div>
+                    <div class="metric-content">
+                        <span class="metric-eq">Num: y = 2.07x - 0.11</span>
+                        <span style="font-family: monospace; font-size: 0.9rem; color: var(--text-secondary);">Ana: y =
+                            2.07x - 0.11</span>
+                        <span class="metric-mse">MSE: 1.348</span>
+                    </div>
+                </div>
+                <div class="metric-box">
+                    <div class="metric-title">Parabola Fit</div>
+                    <div class="metric-content">
+                        <span class="metric-eq">Num: y = 0.81x² + 0.62</span>
+                        <span style="font-family: monospace; font-size: 0.9rem; color: var(--text-secondary);">Ana: y =
+                            0.81x² + 0.62</span>
+                        <span class="metric-mse">MSE: 0.174</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="bento-card col-4 image-card">
+            <img src="./media/fitting_plot.svg" alt="Curve Fitting Plot">
+        </div>
+
+        <div class="bento-card col-4 insights-card">
+            <h2>Convergence Insights</h2>
+            <p>Plotting intermediate steps reveals how algorithms minimize error. Newton's method shows rapid,
+                accelerating convergence towards the root by utilizing curvature (Hessian)[cite: 8]. Coordinate Descent
+                steps sequentially along one axis at a time, showing a steep initial drop in MSE that smoothly levels
+                off at the global minimum.</p>
+        </div>
+
+        <div class="bento-card col-4 image-card">
+            <img src="./media/newton_convergence.svg" alt="Newton Iteration Steps">
+        </div>
+
+        <div class="bento-card col-4 image-card">
+            <img src="./media/mse_convergence.svg" alt="MSE Convergence Steps">
+        </div>
+
+        <div class="bento-card col-4 code-card">
+            <h2>Newton-Raphson</h2>
+            <pre><code>for i in range(max_iter):
+    d_p = 2*(x - x0) + 2*(f(x) - y0)*df(x)
+    d_pp = 2 + 2*(df(x)**2) + 2*(f(x) - y0)*ddf(x)
+    
+    step = d_p / d_pp
+    x_next = x - step
+    
+    if abs(x_next - x) < tolerance:
+        x = x_next
+        break
+    x = x_next</code></pre>
+        </div>
+
+        <div class="bento-card col-4 code-card">
+            <h2>Secant Method</h2>
+            <pre><code>for _ in range(max_iter):
+    f1 = dp(x1)
+    f2 = dp(x2)
+    
+    if abs(f2 - f1) < 1e-14:
+        break
+        
+    x_new = x2 - f2 * (x2 - x1) / (f2 - f1)
+    
+    if abs(x_new - x2) < tolerance:
+        x2 = x_new
+        break
+        
+    x1 = x2
+    x2 = x_new</code></pre>
+        </div>
+
+        <div class="bento-card col-4 code-card">
+            <h2>Coordinate Descent</h2>
+            <pre><code>def fit_line_coord_descent(x, y, i=10):
+    m, c = 0.0, 0.0
+    
+    for _ in range(i):
+        c = np.mean(y - m * x)
+        m = np.sum(x * (y - c)) / np.sum(x**2)
+        
+    mse = np.mean((m * x + c - y)**2)
+    return m, c, mse</code></pre>
+        </div>
+
+    </div>
+</body>
+
+</html>

@@ -1,0 +1,55 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 600 450">
+  <rect width="600" height="450" fill="#ffffff" rx="16"/>
+  <path d="M70 350 L550 350 M310 70 L310 350" stroke="#e5e7eb" stroke-width="2"/>
+  <path d="M70 280 L550 280 M70 210 L550 210 M70 140 L550 140 M70 70 L550 70" stroke="#f3f4f6" stroke-width="1"/>
+  <path d="M150 70 L150 350 M230 70 L230 350 M390 70 L390 350 M470 70 L470 350" stroke="#f3f4f6" stroke-width="1"/>
+
+  <text x="310" y="35" font-family="sans-serif" font-size="18" font-weight="bold" text-anchor="middle" fill="#1f2937">Shortest Distance to Parabola</text>
+  <text x="310" y="390" font-family="sans-serif" font-size="14" text-anchor="middle" fill="#6b7280">X Axis</text>
+  <text x="30" y="210" font-family="sans-serif" font-size="14" text-anchor="middle" transform="rotate(-90 30 210)" fill="#6b7280">Y Axis</text>
+
+  <rect x="440" y="230" width="140" height="90" fill="#ffffff" stroke="#e5e7eb" rx="4"/>
+  <line x1="450" y1="245" x2="470" y2="245" stroke="#10b981" stroke-width="3"/>
+  <text x="480" y="249" font-family="sans-serif" font-size="12" fill="#1f2937">y = x² + 5</text>
+  <line x1="450" y1="265" x2="470" y2="265" stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4"/>
+  <text x="480" y="269" font-family="sans-serif" font-size="12" fill="#1f2937">Shortest Dist</text>
+  <circle cx="460" cy="285" r="4" fill="#1f2937"/>
+  <text x="480" y="289" font-family="sans-serif" font-size="12" fill="#1f2937">Target Point</text>
+  <circle cx="460" cy="305" r="4" fill="#059669"/>
+  <text x="480" y="309" font-family="sans-serif" font-size="12" fill="#1f2937">Closest Point</text>
+
+  <polyline points="150,90 190,195 230,270 270,315 310,330 350,315 390,270 430,195 470,90" fill="none" stroke="#10b981" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <g stroke="#ef4444" stroke-width="2" stroke-dasharray="4,4">
+    <line x1="150" y1="350" x2="296" y2="328"/>
+    <line x1="230" y1="350" x2="303" y2="330"/>
+    <line x1="310" y1="350" x2="310" y2="330"/>
+    <line x1="350" y1="350" x2="314" y2="330"/>
+    <line x1="430" y1="350" x2="321" y2="329"/>
+  </g>
+
+  <g fill="#1f2937" font-family="sans-serif" font-size="11">
+    <circle cx="150" cy="350" r="5"/>
+    <text x="140" y="368">(-8, 0)</text>
+    
+    <circle cx="230" cy="350" r="5"/>
+    <text x="220" y="368">(-4, 0)</text>
+    
+    <circle cx="310" cy="350" r="5"/>
+    <text x="290" y="368">(0, 0)</text>
+    
+    <circle cx="350" cy="350" r="5"/>
+    <text x="340" y="368">(2, 0)</text>
+    
+    <circle cx="430" cy="350" r="5"/>
+    <text x="420" y="368">(6, 0)</text>
+  </g>
+
+  <g fill="#059669">
+    <circle cx="296" cy="328" r="5"/>
+    <circle cx="303" cy="330" r="5"/>
+    <circle cx="310" cy="330" r="5"/>
+    <circle cx="314" cy="330" r="5"/>
+    <circle cx="321" cy="329" r="5"/>
+  </g>
+</svg>
